@@ -4,6 +4,12 @@ from selenium import webdriver
 from pages.carriers_page import CarriersPage
 
 
+# This is a test file. I used a Pytest framework to implement the task.
+# With the help of pytest, I wrote a function that controls the chrome driver.
+# I also prepared the parameterization of the inputs for the test.
+# The test selects a department by name, then count the number of available jobs
+# and compare this value with expected number of vacancies from this department from inputs
+
 # Initialization of chrome driver
 @pytest.fixture()
 def driver(request):
@@ -15,7 +21,7 @@ def driver(request):
     driver.quit()
 
 
-# Inputs for test - name of department and a expected number of vacancies
+# Inputs for test - name of department and an expected number of vacancies
 @pytest.mark.parametrize("department, expected_number_of_vacancies", [
     ("Quality Assurance", 10),
     ("Research and Development", 6),

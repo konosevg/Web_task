@@ -4,6 +4,9 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait
 
 
+# I used the design template page object to solve the given task.
+# The given file contains locators and also functional methods that are used by the test file
+
 class CarriersPage:
 
     # Locators
@@ -35,6 +38,4 @@ class CarriersPage:
     # Method to assert number of found vacancies and number of expected vacancies for this department
     def assert_number_of_vacancies(self, expected_number_of_vacancies):
         actual_number = self.count_number_of_vacancies()
-        # print("actual_number" + str(actual_number))
-        # print("expected_number" + str(expected_number_of_vacancies))
         assert actual_number == expected_number_of_vacancies
